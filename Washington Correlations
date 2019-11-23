@@ -1,0 +1,40 @@
+> lahWashington <- subset(Teams, franchID == "WSN")
+> lahWashington1969 <- subset(lahWashington, yearID >= "1969")
+> Washington <- lahWashington1969[-c(2,3,4,5,11,12,13,14,25,26,41,42,46,47,48)]
+> Washington.correlation <- data.frame(cor(Washington))
+> Washington.Win.Correlation <- subset(Washington.correlation, select=c("W"))
+> Washington.Win.Correlation
+                     W
+yearID      0.23949179
+Rank       -0.74990756
+G           0.24509966
+Ghome       0.26100492
+W           1.00000000
+L          -0.65562550
+R           0.56983870
+AB          0.30009412
+H           0.45025985
+X2B         0.28903524
+X3B         0.12043166
+HR          0.32576848
+BB          0.13609933
+SO          0.27250083
+SB          0.39783259
+CS          0.03841705
+RA         -0.44487753
+ER         -0.42894920
+ERA        -0.61321586
+CG         -0.05471584
+SHO         0.33223664
+SV          0.67087803
+IPouts      0.32886474
+HA         -0.15960382
+HRA        -0.11202847
+BBA        -0.42202624
+SOA         0.45195643
+E          -0.32257978
+DP         -0.23866432
+FP          0.44303274
+attendance  0.53373263
+BPF         0.10668368
+PPF        -0.09798269
