@@ -1,0 +1,131 @@
+BOSTON 
+
+-- Total runs linear regression
+> Bos.linwins.Runs <- lm(W ~ R, data = Boston)
+> print(Bos.linwins.Runs)
+
+Call:
+lm(formula = W ~ R, data = Boston)
+
+Coefficients:
+(Intercept)            R  
+   24.60953      0.07877  
+
+-- At Bats linear regression
+> Bos.linwins.AB <- lm(W ~ AB, data = Boston)
+> print(Bos.linwins.AB)
+
+Call:
+lm(formula = W ~ AB, data = Boston)
+
+Coefficients:
+(Intercept)           AB  
+   -5.74542      0.01676
+
+-- Total Hits linear regression
+> Bos.linwins.Hits <- lm(W ~ H, data = Boston)
+> print(Bos.linwins.Hits)
+
+Call:
+lm(formula = W ~ H, data = Boston)
+
+Coefficients:
+(Intercept)            H  
+    10.8119       0.0506  
+
+-- Total Homeruns linear regression 
+> Bos.linwins.HR <- lm(W ~ HR, data = Boston)
+> print(Bos.linwins.HR)
+
+Call:
+lm(formula = W ~ HR, data = Boston)
+
+Coefficients:
+(Intercept)           HR  
+    62.4522       0.1452  
+
+
+
+-- Walks by Batters linear regression 
+> Bos.linwins.Walks <- lm(W ~ BB, data = Boston)
+> print(Bos.linwins.Walks)
+
+Call:
+lm(formula = W ~ BB, data = Boston)
+
+Coefficients:
+(Intercept)           BB  
+   34.35430      0.09202  
+
+DODGERS
+
+-- Total Runs liner regression
+> LAD.linwins.Runs <- lm( W ~ R, data = Dodgers)
+> print(LAD.linwins.Runs)
+
+Call:
+lm(formula = W ~ R, data = Dodgers)
+
+Coefficients:
+(Intercept)            R  
+   37.01764      0.07164  
+
+-- Total At Bats linear regression
+> LAD.linwins.AtBats <- lm( W ~ AB, data = Dodgers)
+> print(LAD.linwins.AtBats)
+
+Call:
+lm(formula = W ~ AB, data = Dodgers)
+
+Coefficients:
+(Intercept)           AB  
+   -2.23885      0.01625  
+
+-- Total Hits linear regression 
+> LAD.linwins.Hits <- lm( W ~ H, data = Dodgers)
+> print(LAD.linwins.Hits)
+
+Call:
+lm(formula = W ~ H, data = Dodgers)
+
+Coefficients:
+(Intercept)            H  
+    8.26277      0.05544  	
+
+
+--Total walks linear regression 
+> LAD.linwins.Walks <- lm( W ~ BB, data = Dodgers)
+> print(LAD.linwins.Walks)
+
+Call:
+lm(formula = W ~ BB, data = Dodgers)
+
+Coefficients:
+(Intercept)           BB  
+   47.83125      0.07314
+
+
+
+WASHINGTON 
+
+-- Total runs 
+> WSN.linwins.Runs <- lm( W ~ R, data = Washington)
+> print(WSN.linwins.Runs)
+
+Call:
+lm(formula = W ~ R, data = Washington)
+
+Coefficients:
+(Intercept)            R  
+   15.77064      0.09333  
+
+--Earned run Average 
+> WSN.linwins.ERA <- lm( W ~ ERA, data = Washington)
+> print(WSN.linwins.ERA)
+
+Call:
+lm(formula = W ~ ERA, data = Washington)
+
+Coefficients:
+(Intercept)          ERA  
+     128.55       -13.15
