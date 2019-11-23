@@ -1,0 +1,72 @@
+BOSTON GRAPHS
+
+> BOSRuns_W <- ggplot(Boston, aes (x=R, y=W)) + geom_point()+ scale_x_continuous("Runs") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression Boston Total Wins vs. Runs")
+> BOSRuns_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Boston_Runs_Wins.png")
+Saving 8.14 x 4.26 in image
+
+
+> BOSAtBats_W <- ggplot(Boston, aes (x=AB, y=W)) + geom_point()+ scale_x_continuous("At Bats") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression Boston Total Wins vs. At Bats")
+> BOSAtBats_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Boston_AtBats_Wins.png")
+Saving 8.14 x 4.26 in image
+
+
+> BOSHits_W <- ggplot(Boston, aes (x=H, y=W)) + geom_point()+ scale_x_continuous("Total Hits") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression Boston Total Wins vs. Total Hits")
+> BOSHits_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Boston_Hits_Wins.png")
+Saving 8.14 x 4.26 in image
+
+
+> BOSHomeruns_W <- ggplot(Boston, aes (x=HR, y=W)) + geom_point()+ scale_x_continuous("Total Homeruns") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression Boston Total Wins vs. Total Homeruns")
+> BOSHomeruns_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Boston_Homeruns_Wins.png")
+Saving 8.14 x 4.26 in image
+
+
+> BOSWalks_W <- ggplot(Boston, aes (x=BB, y=W)) + geom_point()+ scale_x_continuous("Total Walks by Batters") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression Boston Total Wins vs. Total Walks by Batters")
+> BOSWalks_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Boston_WalksbyHitters_Wins.png")
+Saving 8.14 x 4.26 in image
+ 
+
+DODGERS
+-- Runs vs. Wins Linear Regression graph
+> LADARuns_W <- ggplot(Dodgers, aes (x=R, y=W)) + geom_point()+ scale_x_continuous("Total Hits") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression LA Dodgers Total Wins vs. Total Runs")
+> LADARuns_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Washington_Runs_Wins.png")
+Saving 8.14 x 4.26 in image
+
+-- AtBats vs. Wins Linear Regression graph
+> LADAtBats_W <- ggplot(Dodgers, aes (x=AB, y=W)) + geom_point()+ scale_x_continuous("Total At Bats") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression LA Dodgers Total Wins vs. Total At Bats")
+> LAD.linwins.AtBats <- lm( W ~ AB, data = Dodgers)
+> LADAtBats_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Dodgers_AtBats_Wins.png")
+Saving 8.14 x 4.26 in image
+
+-- Hits vs. Wins Linear Regression graph
+> LADAHits_W <- ggplot(Dodgers, aes (x=H, y=W)) + geom_point()+ scale_x_continuous("Total Hits") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression LA Dodgers Total Wins vs. Total Hits")
+> LADAHits_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Dodgers_Runs_Wins.png")
+Saving 8.14 x 4.26 in image
+
+-- Walks vs. Wins Linear Regression graph
+> LADWalks_W <- ggplot(Dodgers, aes (x=BB, y=W)) + geom_point()+ scale_x_continuous("Total Hits") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression LA Dodgers Total Wins vs. Total Walks by Batters")
+> LADWalks_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("Dodgers_Walks_Wins.png")
+Saving 8.14 x 4.26 in image
+ 
+
+WASHINGTON
+
+-- Runs vs. Wins Linear Regression graph 
+> WSNRuns_W <- ggplot(Washington, aes (x=R, y=W)) + geom_point()+ scale_x_continuous("Total Runs") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression Washington Nationals Total Wins vs. Total Runs")
+> WSNRuns_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("WSN_Runs_Wins.png")
+Saving 8.14 x 4.26 in image
+
+-- Earned Run Average vs. Linear Regression graph 
+> WSNERA_W <- ggplot(Washington, aes (x=ERA, y=W)) + geom_point()+ scale_x_continuous("Earned Run Average") + scale_y_continuous("Total Wins") + ggtitle("Linear Regression Washington Nationals Total Wins vs. Earned Run Average")
+> WSNERA_W + geom_smooth(method = "lm", se= FALSE)
+> ggsave("WSN_ERA_Wins.png")
+Saving 8.14 x 4.89 in image
