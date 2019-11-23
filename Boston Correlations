@@ -1,0 +1,43 @@
+library("Lahman")
+> lahBoston <- subset(Teams, franchID == "BOS")
+> View(lahBoston)
+> lahboston1969 <- subset(lahBoston, yearID >="1969")
+-- Had to Get rid of the non mumerical columns in order to run the correlation command
+> Boston <- lahboston1969[-c(2,3,4,5,11,12,13,14,25,26,41,42,46,47,48)]
+> boston.correlation <- data.frame(cor(Boston))
+> Boston.Win.Correlation <- subset(boston.correlation, select=c("W"))
+> Boston.Win.Correlation
+                      W
+yearID      0.148511907
+Rank       -0.732386923
+G           0.606975114
+Ghome       0.586820989
+W           1.000000000
+L          -0.404995154
+R           0.755731442
+AB          0.611422898
+H           0.637829523
+X2B         0.517610304
+X3B         0.403611691
+HR          0.553358286
+BB          0.622357566
+SO          0.296955429
+SB          0.320414468
+CS         -0.046674246
+RA          0.091379815
+ER          0.130806699
+ERA        -0.283539966
+CG          0.023673867
+SHO         0.446271997
+SV          0.303466202
+IPouts      0.599217037
+HA          0.307218411
+HRA         0.336111610
+BBA         0.007399812
+SOA         0.368918708
+E          -0.006921045
+DP         -0.139772976
+FP          0.200158917
+attendance  0.350853133
+BPF         0.107654794
+PPF        -0.035171289
