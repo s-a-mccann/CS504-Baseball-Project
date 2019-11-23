@@ -1,0 +1,31 @@
+install.packages("Lahman")
+library("Lahman")
+install.packages("ggplot2")
+library("ggplot2")
+
+
+bat10 <- subset(Batting, (yearID == 2010))
+bat11 <- subset(Batting, (yearID == 2011))
+bat12 <- subset(Batting, (yearID == 2012))
+bat13 <- subset(Batting, (yearID == 2013))
+bat14 <- subset(Batting, (yearID == 2014))
+bat15 <- subset(Batting, (yearID == 2015))
+
+relevant_bat <- rbind(bat10, bat11, bat12, bat13, bat14, bat15)
+
+test_pca <- prcomp(relevant_bat[2:8483,6:22], center = TRUE, scale = TRUE)
+summary(test_pca)
+
+screeplot(test_pca, type = "lines", npcs = 10, main = "Screeplot of PC's 1-10")
+abline(h = 1, col="red", lty=5)
+legend("topright", legend=c("Eigenvalue = 1"),
+       col=c("red"), lty=5, cex=0.6)
+
+cumvarplot <- cumsum(test_pca$sdev^2 / sum(test_pca$sdev^2))
+plot(cumvarplot[0:15], xlab = "PC #", ylab = "Amount of explained variance", main = "Cumulative variance plot")
+abline(v = 3, col="blue", lty=5)
+abline(h = 0.84092, col="blue", lty=5)
+legend("topleft", legend=c("Cut-off @ PC3"),
+       col=c("blue"), lty=5, cex=0.6)
+
+plot(test_pca$x[,1],test_pca$x[,2], xlab="PC1 (70.04%)", ylab = "PC2 (9.49%)", main = "PC1 / PC2 - plot")
