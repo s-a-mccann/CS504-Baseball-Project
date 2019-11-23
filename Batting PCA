@@ -17,7 +17,7 @@ relevant_bat <- rbind(bat10, bat11, bat12, bat13, bat14, bat15)
 bat_pca <- prcomp(relevant_bat[2:8483,6:22], center = TRUE, scale = TRUE)
 summary(bat_pca)
 
-screeplot(bat_pca, type = "lines", npcs = 10, main = "Screeplot of PC's 1-10")
+screeplot(bat_pca, type = "lines", npcs = 10, main = "Scree Plot of PC's 1-10")
 abline(h = 1, col="red", lty=5)
 legend("topright", legend=c("Eigenvalue = 1"),
        col=c("red"), lty=5, cex=0.6)
